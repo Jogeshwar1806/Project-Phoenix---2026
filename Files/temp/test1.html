@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Toggle Sidebar</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  body {
+    display: flex;
+    height: 100vh;
+    background: #f4f4f4;
+  }
+
+  /* Hidden checkbox */
+  #toggle {
+    display: none;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background: #333;
+    color: white;
+    padding-top: 60px;
+    transition: 0.4s;
+  }
+
+  .sidebar ul {
+    list-style: none;
+  }
+
+  .sidebar ul li {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .sidebar ul li:hover {
+    background: #444;
+    cursor: pointer;
+  }
+
+  /* Toggle button */
+  .toggle-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #333;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+
+  .toggle-btn:hover {
+    background: #555;
+  }
+
+  /* When checked - show sidebar */
+  #toggle:checked ~ .sidebar {
+    left: 0;
+  }
+
+  #toggle:checked ~ .content {
+    margin-left: 250px;
+  }
+
+  /* Content */
+  .content {
+    flex: 1;
+    padding: 80px 40px;
+    transition: 0.4s;
+  }
+</style>
+</head>
+<body>
+
+<input type="checkbox" id="toggle">
+
+<label for="toggle" class="toggle-btn">☰ Menu</label>
+
+<div class="sidebar">
+  <ul>
+    <li>Dashboard</li>
+    <li>Profile</li>
+    <li>Projects</li>
+    <li>Settings</li>
+    <li>Logout</li>
+  </ul>
+</div>
+
+<div class="content">
+  <h1>Main Content Area</h1>
+  <p>Click the Menu button to open and close the sidebar.</p>
+</div>
+
+<a href="/HTMLnCSSTemplates/Files/temp/test2.html">k</a>
+
+</body>
+</html>
