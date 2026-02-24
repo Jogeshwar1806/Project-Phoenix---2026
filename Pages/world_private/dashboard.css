@@ -5,6 +5,22 @@
   font-family: Arial, sans-serif;
 }
 
+.heading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  color: red;
+  font-size: 3rem;
+}
+
+.content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: blue;
+}
+
 .topbar {
   display: flex;
   justify-content: space-between;
